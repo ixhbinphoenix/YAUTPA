@@ -1,0 +1,54 @@
+{
+  "name": "yautpa-desktop",
+  "version": "0.0.0",
+  "main": "electron/electron.js",
+  "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron": "wait-on tcp:3000 && cross-env IS_DEV=true electron .",
+    "electron:pack": "electron-builder --dir",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none pnpm dev\" \"pnpm electron\"",
+    "electron:builder": "electron-builder",
+    "build:for:electron": "tsc && cross-env ELECTRON=true vite build",
+    "app:build": "pnpm build:for:electron && pnpm electron:builder"
+  },
+  "build": {
+    "appID": "com.github.ixhbinphoenix.yautpa",
+    "productName": "YAUTPA",
+    "copyright": "Copyright 2021 ixhbinphoenix. Licensed under Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0)",
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist_electron"
+    }
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-router-dom": "^5.3.2",
+    "@vitejs/plugin-react": "^1.0.7",
+    "concurrently": "^6.5.1",
+    "cross-env": "^7.0.3",
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5",
+    "sass": "^1.45.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "wait-on": "^6.0.0"
+  }
+}
