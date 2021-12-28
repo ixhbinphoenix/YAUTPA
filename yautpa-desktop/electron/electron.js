@@ -1,4 +1,4 @@
-const path = require("node:path");
+const path = require("path");
 const { app, BrowserWindow } = require("electron");
 const { register } = require("electron-localshortcut");
 

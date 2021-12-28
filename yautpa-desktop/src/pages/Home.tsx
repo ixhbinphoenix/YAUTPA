@@ -1,10 +1,10 @@
-import React from "react";
-
+import Clock from "../components/Clock/index";
 
 export default function Home() {
     return (
-        <div>
-            
+        <div className="Home">
+            <h1>Soon™</h1>
+            <Clock></Clock>
         </div>
     )
 }

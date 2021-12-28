@@ -15,12 +15,19 @@
     "app:build": "pnpm build:for:electron && pnpm electron:builder"
   },
   "build": {
-    "appID": "com.github.ixhbinphoenix.yautpa",
+    "appId": "com.github.ixhbinphoenix.yautpa",
     "productName": "YAUTPA",
     "copyright": "Copyright 2021 ixhbinphoenix. Licensed under Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0)",
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "tar.gz"
+      ],
+      "category": "Utility"
     },
     "files": [
       "dist/**/*",
