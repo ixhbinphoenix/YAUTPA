@@ -8,11 +8,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smooting: grayscale;
 
+    text-align: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#clock {
-    text-align: center;
 }

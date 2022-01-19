@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.scss";
 
 export default function Clock() {
@@ -12,7 +12,12 @@ export default function Clock() {
         return `${expandTime(date.getHours())}:${expandTime(date.getMinutes())}:${expandTime(date.getSeconds())}`
     }
 
-    setInterval(() => setTime(getTime()), 1000)
+    useEffect(() => {
+        setTime(getTime())
+        const timer = setTimeout(() => setTime(getTime()), 1000)
+
+        return () => clearTimeout(timer);
+    })
 
     return (
         <div id="clock">

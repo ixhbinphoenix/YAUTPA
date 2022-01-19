@@ -1,0 +1,20 @@
+@mixin button() {
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+    border-radius: 16%;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem
+}
+
+.countdown {
+    &>button {
+        @include button();
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    &>.counter>button {
+        @include button();
+        margin-left: 0.2rem;
+    }
+}

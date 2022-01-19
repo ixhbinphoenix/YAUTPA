@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import Home from "./pages/Home";
+import Components from "./pages/Components";
 import './index.scss';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Switch>
+                <Route path="/components">
+                    <Components></Components>
+                </Route>
                 <Route path="/">
                     <Home></Home>
                 </Route>
