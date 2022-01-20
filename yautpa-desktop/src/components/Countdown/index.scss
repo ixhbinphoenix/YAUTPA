@@ -1,20 +1,26 @@
 @mixin button() {
-    color: white;
-    background-color: black;
-    border: white 1px solid;
-    border-radius: 16%;
+    color: #0051ff;
+    background-color: #ffffff;
+    border: #0051ff .25rem solid;
     margin-bottom: 0.5rem;
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem
+    margin-left: 10rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    font-size: 3rem;
+    border-radius: 1.5rem;
 }
 
 .countdown {
+    display: inline;
     &>button {
         @include button();
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 1rem;
+        height: 50%;
+        width: 10%;
+        
     }
     &>.counter>button {
         @include button();
-        margin-left: 0.2rem;
+        margin-left: 1rem;
+        padding: .5rem
     }
 }
