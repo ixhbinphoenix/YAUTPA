@@ -1,7 +1,7 @@
 @mixin button() {
-    color: #0051ff;
-    background-color: white;
-    border: #0051ff .25rem solid;
+    color: white;
+    background-color: #00A300;
+    border: #00A300 .25rem solid;
     margin-bottom: 0.5rem;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
     font-size: 3rem;
@@ -15,6 +15,17 @@
         margin-left: 1rem;
         height: 50%;
         width: 10%;
+    }
+    button:active {
+        transform: translateY(.1rem);
+    }
+    button:hover {
+        background-color: #00D100;
+        border-color: #00D100
+    }
+    &>.counter>button:hover {
+        background-color: #00D100;
+        border-color: #00D100
     }
     &>.counter>button {
         @include button();
