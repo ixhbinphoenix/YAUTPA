@@ -15,21 +15,25 @@
         margin-left: 1rem;
         height: 50%;
         width: 10%;
+        &:active {
+            transform: translateY(.1rem);
+        }
+        &:hover {
+            background-color: #00D100;
+            border-color: #00D100;
+        }
     }
-    button:active {
-        transform: translateY(.1rem);
-    }
-    button:hover {
+    &>button:hover {
         background-color: #00D100;
-        border-color: #00D100
-    }
-    &>.counter>button:hover {
-        background-color: #00D100;
-        border-color: #00D100
+        border-color: #00D100;
     }
     &>.counter>button {
         @include button();
         margin-left: 1rem;
-        padding: .5rem
+        padding: .5rem;
+        &:hover {
+            background-color: #00D100;
+            border-color: #00D100;
+        }
     }
 }
