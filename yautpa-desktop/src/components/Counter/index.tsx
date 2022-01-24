@@ -15,7 +15,12 @@ export default function Counter(props: IProps) {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setNum(num - 1)
+            if (num >= 1) {
+                setNum(num - 1)
+            }
+            else {
+                setToggle(!toggle)
+            }
         }, 1000)
 
         if (!toggle) {

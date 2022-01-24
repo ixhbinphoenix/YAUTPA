@@ -35,5 +35,8 @@
             background-color: #00D100;
             border-color: #00D100;
         }
+        &:active {
+            transform: translateY(.1rem);
+        }
     }
 }
