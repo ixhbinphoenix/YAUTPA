@@ -1,0 +1,56 @@
+$scale: 1;
+$scale-width: 1;
+$scale-height: .6;
+
+@mixin button() {
+    color: white;
+    background-color: #00A300;
+    border: #00A300 .25rem solid;
+    padding: .1rem .3rem .1rem .3rem;
+    font-size: 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin-left: .2rem;
+    margin-right: .2rem;
+}
+
+@mixin tableElement {
+    padding-right: $scale * $scale-width * 7rem;
+    padding-bottom: $scale * $scale-height * 7rem;
+    padding-left: $scale * $scale-width * 1rem;
+    padding-top: $scale * $scale-height * 1rem;
+    border: solid .1rem;
+    align-self: center;
+}
+
+.grayItem{
+    color: rgb(200, 200, 200);
+    background-color: #007500;
+}
+
+table{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button{
+    @include button();
+}
+
+#title{
+    width: 10rem;
+}
+
+#calendarTable{
+    border-collapse: collapse;
+    border: solid;
+    &>tr{
+        &>th{
+            @include tableElement();
+        }
+        &>td{
+            @include tableElement();
+            cursor: pointer;
+        }
+    }
+}
