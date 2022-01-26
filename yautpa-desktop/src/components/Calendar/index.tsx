@@ -63,7 +63,7 @@ export default function Calendar() {
     for (let i = 0; i < 42; i++) {
         let tempDate = new Date(preMonthDay.getFullYear(), preMonthDay.getMonth(), preMonthDay.getDate() + i);
         //modulo magic: we fist of all estimate the month to go over 6 weeks, because thats the largest possible
-        //but we dont want to be the calendar larger than necessecary, so we check at the begin of week 4 and 5
+        //but we dont want the calendar to be larger than necessecary, so we check at the begin of week 4 and 5
         //if the month is already over
         if (i % 35 == 0 && tempDate.getFullYear() == date.getFullYear() + 1 || i % 28 == 0 && tempDate.getFullYear() == date.getFullYear() + 1){
             break;
