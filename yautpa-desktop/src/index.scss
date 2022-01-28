@@ -1,12 +1,12 @@
 @import "style/vars.scss";
 
 body {
-    background: linear-gradient(180deg, rgba(0,117,0,1) 0%, rgba(0,163,0,1) 100%);
+    background: $background;
     background-repeat:no-repeat;
     background-attachment: fixed;
-    color: white;
+    color: $color;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: $font;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smooting: grayscale;
 
