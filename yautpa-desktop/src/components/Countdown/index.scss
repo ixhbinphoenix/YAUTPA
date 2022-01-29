@@ -1,42 +1,18 @@
-@mixin button() {
-    color: white;
-    background-color: #00A300;
-    border: #00A300 .25rem solid;
-    margin-bottom: 0.5rem;
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-    font-size: 3rem;
-    border-radius: 1.5rem;
-}
+@import '../../style/vars.scss';
 
 .countdown {
     display: inline;
     &>button {
+        font-size: 3rem;
+        padding: .2rem .4rem .2rem .4rem;
         @include button();
         margin-left: 1rem;
         height: 50%;
         width: 10%;
-        &:active {
-            transform: translateY(.1rem);
-        }
-        &:hover {
-            background-color: #00D100;
-            border-color: #00D100;
-        }
-    }
-    &>button:hover {
-        background-color: #00D100;
-        border-color: #00D100;
     }
     &>.counter>button {
         @include button();
         margin-left: 1rem;
         padding: .5rem;
-        &:hover {
-            background-color: #00D100;
-            border-color: #00D100;
-        }
-        &:active {
-            transform: translateY(.1rem);
-        }
     }
 }
