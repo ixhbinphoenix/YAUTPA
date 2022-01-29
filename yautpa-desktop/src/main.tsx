@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import Home from "./pages/Home";
 import Components from "./pages/Components";
+import Game from "./pages/Game";
 import './index.scss';
 
 ReactDOM.render(
@@ -11,6 +12,9 @@ ReactDOM.render(
             <Switch>
                 <Route path="/components">
                     <Components></Components>
+                </Route>
+                <Route path="/Game">
+                    <Game></Game>
                 </Route>
                 <Route path="/">
                     <Home></Home>

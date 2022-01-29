@@ -1,7 +1,7 @@
 import Clock from "../components/Clock";
 import Comp from "../components/Comp";
 import Countdown from "../components/Countdown";
-
+import { Link } from "react-router-dom";
 
 export default function Components() {
     return (
@@ -14,6 +14,7 @@ export default function Components() {
             <Comp title="Countdown" subtitle="Look mom, I can count from ${Number.MIN_SAFE_INTEGER} to ${Number.MAX_SAFE_INTEGER}!">
                 <Countdown></Countdown>
             </Comp>
+            <Link to="/Game">I want to play a game with you</Link>
         </div>
     )
 }
