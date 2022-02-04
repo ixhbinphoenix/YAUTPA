@@ -1,18 +1,18 @@
-@import '../../style/vars.scss';
+@import "../../style/vars.scss";
 
 .countdown {
-    display: inline;
-    &>button {
-        font-size: 3rem;
-        padding: .2rem .4rem .2rem .4rem;
-        @include button();
-        margin-left: 1rem;
-        height: 50%;
-        width: 10%;
-    }
-    &>.counter>button {
-        @include button();
-        margin-left: 1rem;
-        padding: .5rem;
-    }
+  display: inline;
+  & > button {
+    font-size: 3rem;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    @include button();
+    margin-left: 1rem;
+    height: 50%;
+    width: 10%;
+  }
+  & > .counter > button {
+    @include button();
+    margin-left: 1rem;
+    padding: 0.5rem;
+  }
 }

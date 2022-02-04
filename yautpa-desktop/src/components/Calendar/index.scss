@@ -1,46 +1,46 @@
-@import '../../style/vars.scss';
+@import "../../style/vars.scss";
 
 $scale: 1;
 $scale-width: 1;
-$scale-height: .6;
+$scale-height: 0.6;
 
 @mixin tableElement {
-    padding-right: $scale * $scale-width * 7rem;
-    padding-bottom: $scale * $scale-height * 7rem;
-    padding-left: $scale * $scale-width * 1rem;
-    padding-top: $scale * $scale-height * 1rem;
-    border: solid .1rem;
-    align-self: center;
+  padding-right: $scale * $scale-width * 7rem;
+  padding-bottom: $scale * $scale-height * 7rem;
+  padding-left: $scale * $scale-width * 1rem;
+  padding-top: $scale * $scale-height * 1rem;
+  border: solid 0.1rem;
+  align-self: center;
 }
 
-.grayItem{
-    color: rgb(200, 200, 200);
-    background-color: #007500;
+.grayItem {
+  color: rgb(200, 200, 200);
+  background-color: #007500;
 }
 
-table{
-    margin-right: auto;
-    margin-left: auto;
+table {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-button{
-    @include button();
+button {
+  @include button();
 }
 
-#title{
-    width: 10rem;
+#title {
+  width: 10rem;
 }
 
-#calendarTable{
-    border-collapse: collapse;
-    border: solid;
-    &>tr{
-        &>th{
-            @include tableElement();
-        }
-        &>td{
-            @include tableElement();
-            cursor: pointer;
-        }
+#calendarTable {
+  border-collapse: collapse;
+  border: solid;
+  & > tr {
+    & > th {
+      @include tableElement();
     }
+    & > td {
+      @include tableElement();
+      cursor: pointer;
+    }
+  }
 }

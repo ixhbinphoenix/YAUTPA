@@ -1,18 +1,18 @@
 @import "style/vars.scss";
 
 body {
-    background: $background;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    color: $color;
-    margin: 0;
-    font-family: $font;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smooting: grayscale;
+  background: $background;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $color;
+  margin: 0;
+  font-family: $font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smooting: grayscale;
 
-    text-align: center;
+  text-align: center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
