@@ -4,5 +4,10 @@
 	},
 	"dependencies": {
 		"husky": "^7.0.4"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "cd yautpa-desktop && pnpm format"
+		}
 	}
 }
