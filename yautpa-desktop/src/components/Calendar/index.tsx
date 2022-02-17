@@ -37,7 +37,6 @@ export default function Calendar() {
   const [monthString, setMonthString] = useState(getMonthString(monthNumber));
   const [year, setYear] = useState(new Date().getFullYear());
 
-  //handle buttons to decrease/increase month
   const handleDecrease = () => {
     if (monthNumber - 1 < 0) {
       setYear(year - 1);
@@ -60,26 +59,20 @@ export default function Calendar() {
     }
   };
 
-  //gets the current date and adds (if necessary) month and year
   let date = new Date();
   date.setMonth(monthNumber);
   date.setFullYear(year);
   var days = [];
 
-  //gets the first day of the month
   let start = new Date(date.getFullYear(), date.getMonth(), 1);
   let preMonthDay = start;
-  //gets the monday of the week from the first day of the month
-  preMonthDay.setDate(-start.getDay() + 3);
+  preMonthDay.setDate(-start.getDay() + 1);
   for (let i = 0; i < 42; i++) {
     let tempDate = new Date(
       preMonthDay.getFullYear(),
       preMonthDay.getMonth(),
       preMonthDay.getDate() + i
     );
-    //modulo magic: we fist of all estimate the month to go over 6 weeks, because thats the largest possible
-    //but we dont want the calendar to be larger than necessecary, so we check at the begin of week 4 and 5
-    //if the month is already over
     if (
       (i % 35 == 0 && tempDate.getFullYear() == date.getFullYear() + 1) ||
       (i % 28 == 0 && tempDate.getFullYear() == date.getFullYear() + 1)
