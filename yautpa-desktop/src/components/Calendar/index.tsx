@@ -55,7 +55,7 @@ export default function Calendar() {
 
     let start = new Date(date.getFullYear(), date.getMonth(), 1);
     let preMonthDay = start;
-    preMonthDay.setDate(- start.getDay() + 3);
+    preMonthDay.setDate(- start.getDay() + 1);
     for (let i = 0; i < 42; i++) {
         let tempDate = new Date(preMonthDay.getFullYear(), preMonthDay.getMonth(), preMonthDay.getDate() + i);
         if (i % 35 == 0 && tempDate.getFullYear() == date.getFullYear() + 1 || i % 28 == 0 && tempDate.getFullYear() == date.getFullYear() + 1){
