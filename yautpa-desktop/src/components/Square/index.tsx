@@ -6,14 +6,14 @@ export default function Square() {
   const [top, setTop] = useState("48vh");
   const [color, setColor] = useState("#00D100");
   const [counter, addCounter] = useState(0);
-  const [speed, setSpeed] = useState(0)
-  const [currentSpeed, setCurrentSpeed] = useState(0)
-  const [timer, setTimer] = useState(0)
-  
+  const [speed, setSpeed] = useState(0);
+  const [currentSpeed, setCurrentSpeed] = useState(0);
+  const [timer, setTimer] = useState(0);
+
   setTimeout(() => {
-    setCurrentSpeed(Math.round((speed/timer) * 100)/100)
-    setTimer(timer + 1)
-  }, 1000)
+    setCurrentSpeed(Math.round((speed / timer) * 100) / 100);
+    setTimer(timer + 1);
+  }, 1000);
 
   function pickPos(): void {
     setSpeed(speed + 1);
